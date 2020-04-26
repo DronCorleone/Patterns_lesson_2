@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public sealed class LaserAmmunitiom : MonoBehaviour
+public sealed class LaserAmmunitiom : Ammunition
 {
     private LineRenderer _lineRenderer;
     [SerializeField] private float _distance;
@@ -19,5 +19,10 @@ public sealed class LaserAmmunitiom : MonoBehaviour
         var hit = Physics2D.Raycast(ray.origin, direction, _distance);
 
         _lineRenderer.SetPosition(1, hit.collider ? hit.point : ray.GetPoint(_distance));
+    }
+
+    public void EndFire()
+    {
+        Destroy(gameObject);
     }
 }

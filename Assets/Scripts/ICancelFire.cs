@@ -1,4 +1,6 @@
-﻿public interface ICancelFire
+﻿
+
+public interface ICancelFire
 {
     void EndFire();
 }

@@ -591,9 +591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weapon: {fileID: 163275150}
-  _acceleration: 30
+  _acceleration: 300
   _maxSpeed: 20
-  _jumpForce: 20
+  _jumpForce: 40
 --- !u!50 &163275146
 Rigidbody2D:
   serializedVersion: 4
@@ -609,7 +609,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -657,6 +657,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &163275150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163275143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7fd36fe2cea4b2a9fa2ef5414993d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _barrel: {fileID: 1512690671}
+  _ammunition: {fileID: 2881972517126558161, guid: cbc8f000c007cb246a222e22db621463,
+    type: 3}
+  _rechergeTime: 0.2
+--- !u!114 &163275151
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
