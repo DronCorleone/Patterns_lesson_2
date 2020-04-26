@@ -1,12 +1,21 @@
-﻿public sealed class Laser : Weapon, ICancelFire
+﻿
+
+public sealed class Laser : Weapon, ICancelFire
 {
+    private Ammunition _tempAmmunition;
+
     public override void Fire()
     {
-        throw new System.NotImplementedException();
+        if (!_isReady) return;
+        var direction = -_barrel.right * transform.localScale.x;
+        _tempAmmunition = Instantiate(_ammunition, _barrel.position, _barrel.rotation);
+        _tempAmmunition.GetComponent<LaserAmmunitiom>().SetLineRenderer(_barrel, direction);
+        _isReady = false;
     }
 
     public void EndFire()
     {
-        throw new System.NotImplementedException();
+        _tempAmmunition.GetComponent<LaserAmmunitiom>().EndFire();
+        _isReady = true;
     }
 }
